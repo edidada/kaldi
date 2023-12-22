@@ -1,0 +1,19 @@
+name: run script
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: requrie
+      run: chmod +x ./INSTALL
+    - name: run
+      run: ./INSTALL
